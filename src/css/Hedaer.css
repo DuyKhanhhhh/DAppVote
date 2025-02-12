@@ -1,0 +1,11 @@
+.button-connect {
+    background-color: #BBEAE4;
+    color: white;
+    padding: 0 5px 0px 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bg-color-header {
+    background-color: #BBEAE4;
+}
