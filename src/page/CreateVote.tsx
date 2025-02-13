@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../compoment/Header'
-import { Breadcrumb, Steps, DatePicker, Space, Button, message, TimePicker } from 'antd';
+import { Breadcrumb, Steps, DatePicker, Space, Button, message, TimePicker, Result } from 'antd';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import { Link } from 'react-router-dom';
@@ -281,11 +281,15 @@ export default function CreateVote() {
                             </div>
                         ) : (
                             <div>
-                                <DotLottieReact
-                                    src="https://lottie.host/e6aee7cd-f2d8-4e08-8e4c-47b462426317/jonBfgC3K8.lottie"
-                                    loop
-                                    autoplay
-                                    className='w-200'
+                                <Result
+                                    status="success"
+                                    title="Congratulations! You have successfully created the vote!"
+                                    subTitle="Address: 0x0e890800061A283Ca1359fA251824DA1f6581dDf"
+                                    extra={[
+                                        <Button type="primary" key="console" onClick={() => message.success('Create complete!')} >
+                                            <Link to={'/listVote'} >Success</Link>
+                                        </Button>,
+                                    ]}
                                 />
                             </div>
                         )}
@@ -303,7 +307,7 @@ export default function CreateVote() {
                         </Button>
                     )}
                     {current === steps.length - 1 && (
-                        <Button type="primary" onClick={() => message.success('Create complete!')}>
+                        <Button type="primary" disabled={current < 3}>
                             Done
                         </Button>
                     )}
