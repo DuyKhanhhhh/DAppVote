@@ -23,7 +23,7 @@ export default function Home() {
         setIsModalOpen(false);
     };
     return (
-        <div className="bg-[url('https://freeimage.host/i/3JUfwOl')] h-230 bg-cover bg-center">
+        <div className="bg-[url('https://i.postimg.cc/qRZPS8HS/bg.png')] h-230 bg-cover bg-center">
             <div className=''>
                 <HeaderHome />
                 <div className='static'>
